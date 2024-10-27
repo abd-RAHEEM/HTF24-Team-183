@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="SportIQ Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <nav class="nav-links">
+            <a href="#live">Live Match</a>
+            <a href="#stats">Stats</a>
+            <a href="#player">Player</a>
+            <a href="fan-quiz.html">Fan Quiz</a>
+            <a href="news.html">News</a> <!-- Add the new News link -->
+
+            <a href="#contact">Contact Us</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <img src="bell-icon.png" class="bell-icon" alt="Notifications">
+            <img src="user-profile.png" class="user-profile" alt="Profile">
+        </nav>
+    </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports News</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('newsbg.jpg'); /* Add your background image here */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+        .news-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .news-item {
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Latest Sports News</h1>
+<div class="news-container" id="news"></div>
+
+<script>
+    const newsData = [
+        {
+            title: "Team A wins the championship!",
+            image: "download2.jpeg", // Replace with your image path
+            content: "Team A has emerged victorious in the finals, taking home the trophy!"
+        },
+        {
+            title: "Barcelona sets new record!",
+            image: "barca.jpeg", // Replace with your image path
+            content: "Barcelona has set a new record for the most goals in a single season!"
+        },
+        // Add more news items as needed
+    ];
+
+    function loadNews() {
+        const newsContainer = document.getElementById('news');
+        newsData.forEach(item => {
+            const newsItem = document.createElement('div');
+            newsItem.classList.add('news-item');
+            newsItem.innerHTML = `<h3>${item.title}</h3>
+                                  <img src="${item.image}" alt="${item.title}">
+                                  <p>${item.content}</p>`;
+            newsContainer.appendChild(newsItem);
+        });
+    }
+
+    loadNews();
+</script>
+
+</body>
+</html>

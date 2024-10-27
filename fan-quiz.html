@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="SportIQ Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <nav class="nav-links">
+            <a href="#live">Live Match</a>
+            <a href="#stats">Stats</a>
+            <a href="#player">Player</a>
+            <a href="fan-quiz.html">Fan Quiz</a>
+            <a href="news.html">News</a> <!-- Add the new News link -->
+
+            <a href="#contact">Contact Us</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <img src="bell-icon.png" class="bell-icon" alt="Notifications">
+            <img src="user-profile.png" class="user-profile" alt="Profile">
+        </nav>
+    </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('fanquiz.jpg'); /* Add your background image here */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+        .quiz-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Sports Fan Quiz</h1>
+<div class="quiz-container" id="quiz"></div>
+<button onclick="submitQuiz()">Submit</button>
+
+<script>
+    const quizData = [
+        {
+            question: "Which country won the FIFA World Cup in 2018?",
+            options: ["Brazil", "Germany", "France", "Argentina"],
+            answer: "France"
+        },
+        {
+            question: "What sport is known as the 'king of sports'?",
+            options: ["Basketball", "Football", "Cricket", "Tennis"],
+            answer: "Football"
+        },
+        // Add more questions as needed
+    ];
+
+    function loadQuiz() {
+        const quizContainer = document.getElementById('quiz');
+        quizData.forEach((item, index) => {
+            const questionEl = document.createElement('div');
+            questionEl.classList.add('question');
+            questionEl.innerHTML = `<h3>${item.question}</h3>` + 
+                item.options.map((option, i) => `<label><input type="radio" name="question${index}" value="${option}">${option}</label>`).join('');
+            quizContainer.appendChild(questionEl);
+        });
+    }
+
+    function submitQuiz() {
+        let score = 0;
+        quizData.forEach((item, index) => {
+            const selected = document.querySelector(`input[name="question${index}"]:checked`);
+            if (selected && selected.value === item.answer) {
+                score++;
+            }
+        });
+        alert(`You scored ${score} out of ${quizData.length}`);
+    }
+
+    loadQuiz();
+</script>
+
+</body>
+</html>

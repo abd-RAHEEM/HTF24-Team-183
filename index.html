@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportIQ - Your Ultimate Hub for Sports Insights</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Video Section -->
+    <div class="video-section">
+        <video autoplay muted loop class="background-video">
+            <source src="intro.mp4" type="video/mp4">
+        </video>
+
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">
+                <img src="logo.png" alt="SportIQ Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <nav class="nav-links">
+                <a href="#live">Live Match</a>
+                <a href="#stats">Stats</a>
+                <a href="#player">Player</a>
+                <a href="fan-quiz.html">Fan Quiz</a>
+                <a href="news.html">News</a> <!-- Add the new News link -->
+                <a href="notifications.html">
+                    <img src="notification-icon.png" alt="Notifications" class="notification-icon"> Notifications
+                </a>
+                <a href="#contact">Contact Us</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <img src="user-profile.png" class="user-profile" alt="Profile">
+            </nav>
+        </header>
+
+        <!-- Centered Text on Video -->
+        <div class="center-text">
+            <h1>Ready for Action?</h1>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="sidebar">
+            <!-- Calendar Section -->
+            <div class="calendar">
+                <h3>October 2024</h3>
+                <div class="calendar-grid">
+                    <!-- Calendar days here -->
+                </div>
+                <button class="today-btn">Today</button>
+            </div>
+            <!-- Advertisement -->
+            <div class="advertisement">ADVERTISEMENT</div>
+        </section>
+
+        <section class="match-section">
+            <div class="live-filters">
+                <button>All</button>
+                <button class="live">LIVE (25)</button>
+                <button>Show odds</button>
+            </div>
+            <!-- Match Cards -->
+            <div class="match-list">
+                <!-- Example match card -->
+                <div class="match-card">
+                    <div class="league">India - Super League</div>
+                    <div class="teams">
+                        <span>Mumbai City</span>
+                        <span>Odisha</span>
+                    </div>
+                    <div class="rating">Sofascore Ratings</div>
+                    <div class="star">⭐</div>
+                </div>
+                <!-- Add more match cards here -->
+            </div>
+        </section>
+
+        <!-- Featured Match Section -->
+        <aside class="featured-match">
+            <h4>Featured Match</h4>
+            <div class="match-details">
+                <div class="teams">
+                    <span>LA Galaxy</span>
+                    <span>Colorado</span>
+                </div>
+                <div class="score">1 - 0</div>
+                <p>Halftime</p>
+            </div>
+            <!-- Betting odds section -->
+            <div class="odds">
+                <button>LA Galaxy 2.00</button>
+                <button>Colorado 1.85</button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Live Scores Section -->
+    <section class="live-scores">
+        <div class="score-item">
+            <span class="status blinking">Live</span>
+            <span class="flag-india"></span> <!-- Flag for India -->
+            <span class="match">IND vs Pakistan</span>
+            <span class="score">Score</span>
+        </div>
+        <div class="score-item">
+            <span class="status blinking">Live</span>
+            <span class="flag-spain"></span> <!-- Flag for Spain -->
+            <span class="match">Barca vs Real Madrid</span>
+            <span class="score">Score</span>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <footer id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Reach out for support, feedback, or general inquiries.</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </footer>
+</body>
+</html>

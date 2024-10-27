@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - SportIQ</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label>Username:</label>
+            <input type="text" id="username" required>
+
+            <label>Password:</label>
+            <input type="password" id="password" required>
+
+            <label>Country:</label>
+            <input type="text" id="country" autocomplete="off" oninput="suggestCountries()">
+            <div id="countrySuggestions" class="suggestions-box"></div> <!-- Fixed suggestion box container -->
+
+            <label>Favorite Sport:</label>
+            <input type="text" id="sport" autocomplete="off" oninput="suggestSports()">
+            <div id="sportSuggestions" class="suggestions-box"></div> <!-- Fixed suggestion box container -->
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
